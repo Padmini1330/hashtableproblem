@@ -51,6 +51,18 @@ public class LinkedHashMap<K,V>
 			node.setValue(value);
 	}
 	
+	public void remove(K key) 
+	{
+		int index = this.getBucketIndex(key);
+		LinkedList<K> linkedList = this.myBucketArray.get(index);
+		if(linkedList==null) 
+		{
+			System.out.println("no such value present");
+			return;
+		}
+		linkedList.delete(key);
+	}
+	
 	@Override
 	 public String toString() 
 	{
