@@ -26,6 +26,9 @@ public class HashMapMain
 			int frequency = myLinkedHashMap.get(word);
 			System.out.println("Frequency of word *"+word+"* : "+frequency);
 		}
+		
+		myLinkedHashMap.remove("avoidable");
+		System.out.println(myLinkedHashMap);
 	}
 
 }
